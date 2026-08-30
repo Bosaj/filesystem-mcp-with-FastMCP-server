@@ -311,3 +311,13 @@ Perfect for:
 ---
 
 **Happy building! 🎉**
+
+
+## 📊 Monitoring, Controlling, Evaluation & QA
+
+This project includes a standardized 4-Pillar Observability and QA framework:
+- **Logs & Prometheus/Grafana Monitoring**: Configured in `monitoring/` with Prometheus scraper configs and Grafana dashboards.
+- **Health Controlling & Evaluation**: Liveness/readiness controllers in `monitoring/health.py` and evaluation harness in `scripts/eval_harness.py`.
+- **QA & Testing**: Automated Pytest/Vitest integration and CI workflows via `.github/workflows/ci_qa_monitoring.yml`.
+
+For complete instructions, architecture details, and commands, see [docs/MONITORING_AND_QA.md](file:///C:\Users\ROG FLOW\Desktop\Projects\Github_Projects\filesystem-mcp-with-FastMCP-server\docs\MONITORING_AND_QA.md).
