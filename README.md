@@ -1,4 +1,10 @@
-# 🗂️ MCP Filesystem Assistant
+# filesystem-mcp-with-FastMCP-server
+
+![CI Pipeline](https://github.com/chakorabdellatif/filesystem-mcp-with-FastMCP-server/actions/workflows/ci_qa_monitoring.yml/badge.svg)
+[![GitHub Wiki](https://img.shields.io/badge/Documentation-GitHub%20Wiki-blue.svg)](https://github.com/chakorabdellatif/filesystem-mcp-with-FastMCP-server/wiki)
+[![Quality Gate](https://img.shields.io/badge/Quality%20Gate-Passed-brightgreen.svg)](docs/MONITORING_AND_QA.md)
+
+---
 
 A beautiful AI-powered file manager built with **Model Context Protocol (MCP)**, featuring a modern web interface, OpenAI integration, and secure filesystem operations.
 
@@ -320,4 +326,12 @@ This project includes a standardized 4-Pillar Observability and QA framework:
 - **Health Controlling & Evaluation**: Liveness/readiness controllers in `monitoring/health.py` and evaluation harness in `scripts/eval_harness.py`.
 - **QA & Testing**: Automated Pytest/Vitest integration and CI workflows via `.github/workflows/ci_qa_monitoring.yml`.
 
-For complete instructions, architecture details, and commands, see [docs/MONITORING_AND_QA.md](file:///C:\Users\ROG FLOW\Desktop\Projects\Github_Projects\filesystem-mcp-with-FastMCP-server\docs\MONITORING_AND_QA.md).
+For complete instructions, architecture details, and commands, see [docs/MONITORING_AND_QA.md](docs/MONITORING_AND_QA.md).
+
+---
+
+## 📚 Documentation & GitHub Wiki
+- 📖 **Official Project Wiki**: [https://github.com/chakorabdellatif/filesystem-mcp-with-FastMCP-server/wiki](https://github.com/chakorabdellatif/filesystem-mcp-with-FastMCP-server/wiki)
+- 🔍 **Architecture & Design**: [https://github.com/chakorabdellatif/filesystem-mcp-with-FastMCP-server/wiki/Architecture-and-Design](https://github.com/chakorabdellatif/filesystem-mcp-with-FastMCP-server/wiki/Architecture-and-Design)
+- 🚀 **Getting Started Guide**: [https://github.com/chakorabdellatif/filesystem-mcp-with-FastMCP-server/wiki/Getting-Started](https://github.com/chakorabdellatif/filesystem-mcp-with-FastMCP-server/wiki/Getting-Started)
+- 📊 **Monitoring & Observability**: [docs/MONITORING_AND_QA.md](docs/MONITORING_AND_QA.md)
