@@ -1,5 +1,8 @@
 # ⚡ FastMCP Filesystem Server & AI Assistant
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/Bosaj/filesystem-mcp-with-FastMCP-server) [![GitHub release](https://img.shields.io/github/v/release/Bosaj/filesystem-mcp-with-FastMCP-server?color=blue&label=release)](https://github.com/Bosaj/filesystem-mcp-with-FastMCP-server/releases) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
+
+
 <p align="center">
   <img src="assets/social_preview.jpg" alt="FastMCP Filesystem Server Social Preview Banner" width="100%">
 </p>
