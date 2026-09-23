@@ -15,6 +15,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python: 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)](requirements.txt)
 [![MCP Protocol](https://img.shields.io/badge/MCP-FastMCP%20Enabled-8A2BE2?logo=fastapi)](server/filesystem_mcp_server.py)
+[![M8ven Trust Index](https://m8ven.ai/badge/mcp/bosaj/filesystem-mcp-with-fastmcp-server)](https://m8ven.ai/mcp/bosaj-filesystem-mcp-with-fastmcp-server-dafn3x)
+[![Sponsor](https://img.shields.io/badge/Sponsor-Bosaj-ea4aaa?style=flat-square&logo=github-sponsors)](https://github.com/sponsors/Bosaj)
 
 **A high-performance, sandboxed filesystem manager built on the Model Context Protocol (MCP) with FastMCP, featuring a reactive Streamlit UI and OpenAI function calling.**
 
@@ -23,6 +25,18 @@
 </div>
 
 ---
+
+
+---
+
+## 🛡️ Security & M8ven Trust Verification
+
+[![M8ven Trust Index](https://m8ven.ai/badge/mcp/bosaj/filesystem-mcp-with-fastmcp-server)](https://m8ven.ai/mcp/bosaj-filesystem-mcp-with-fastmcp-server-dafn3x)
+
+This MCP server is listed and independently verified on the **[M8ven Trust Index](https://m8ven.ai/mcp/bosaj-filesystem-mcp-with-fastmcp-server-dafn3x)**:
+* 🔒 **Sandboxed Path Validation**: Restricts all file mutations within the isolated workspace with path traversal (../) prevention.
+* ⚡ **Model Context Protocol (MCP)**: Native stdio/SSE tools compatible with Claude Desktop and FastMCP runtime.
+* 📋 **Trust Inspection**: Check the latest security audit and independent review on [M8ven](https://m8ven.ai/mcp/bosaj-filesystem-mcp-with-fastmcp-server-dafn3x).
 
 ## 🎯 What is This?
 
