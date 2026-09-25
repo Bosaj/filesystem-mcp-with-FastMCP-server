@@ -1,8 +1,10 @@
 """
 Configuration for MCP Filesystem Server
 """
+
 import os
 from pathlib import Path
+
 from dotenv import load_dotenv
 
 # Load environment variables
@@ -26,8 +28,19 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # Allowed file extensions for safety
 ALLOWED_EXTENSIONS = {
-    '.txt', '.md', '.json', '.csv', '.xml', '.yaml', '.yml',
-    '.py', '.js', '.html', '.css', '.pdf', '.log'
+    ".txt",
+    ".md",
+    ".json",
+    ".csv",
+    ".xml",
+    ".yaml",
+    ".yml",
+    ".py",
+    ".js",
+    ".html",
+    ".css",
+    ".pdf",
+    ".log",
 }
 
 # Maximum file size (10MB)

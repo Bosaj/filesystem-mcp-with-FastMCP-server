@@ -1,27 +1,29 @@
 """
 UI Components - Reusable Streamlit Components with Clean Light Theme
 """
-import streamlit as st
-from pathlib import Path
+
 from datetime import datetime
-from typing import List, Dict
+from pathlib import Path
+
+import streamlit as st
 
 
 class UIComponents:
     """Reusable UI components for Streamlit application."""
-    
+
     @staticmethod
     def render_custom_css():
         """Inject custom CSS for clean, simple light theme."""
-        st.markdown("""
+        st.markdown(
+            """
         <style>
             /* ===== CLEAN LIGHT THEME ===== */
             @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-            
+
             * {
                 font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             }
-            
+
             /* Main background - Simple white */
             html, body, [data-testid="stApp"] {
                 background: #ffffff;
@@ -33,7 +35,7 @@ class UIComponents:
                 background: #f8f9fa;
                 border-right: 2px solid #e9ecef;
             }
-            
+
             [data-testid="stSidebar"] [data-testid="stMarkdownContainer"] {
                 color: #1a1a1a !important;
             }
@@ -103,7 +105,7 @@ class UIComponents:
                 color: #1a1a1a;
                 transition: all 0.2s ease;
             }
-            
+
             .stButton > button:hover {
                 border-color: #2196f3;
                 background: #f5f5f5;
@@ -118,7 +120,7 @@ class UIComponents:
                 border-radius: 6px !important;
                 padding: 0.75rem !important;
             }
-            
+
             .stTextInput > div > div > input:focus,
             .stTextArea > div > div > textarea:focus {
                 border-color: #2196f3 !important;
@@ -131,7 +133,7 @@ class UIComponents:
                 background: transparent;
                 border-bottom: 2px solid #e0e0e0;
             }
-            
+
             .stTabs [data-baseweb="tab"] {
                 border-radius: 6px 6px 0 0;
                 background: #f5f5f5;
@@ -141,7 +143,7 @@ class UIComponents:
                 font-weight: 500;
                 color: #666666;
             }
-            
+
             .stTabs [aria-selected="true"] {
                 background: #ffffff;
                 color: #1a1a1a !important;
@@ -158,7 +160,7 @@ class UIComponents:
                 font-weight: 500;
                 color: #1a1a1a;
             }
-            
+
             .streamlit-expanderHeader:hover {
                 background: #f0f0f0;
             }
@@ -171,7 +173,7 @@ class UIComponents:
                 color: #1b5e20;
                 padding: 1rem;
             }
-            
+
             .stError {
                 background: #ffebee;
                 border-left: 4px solid #f44336;
@@ -179,7 +181,7 @@ class UIComponents:
                 color: #b71c1c;
                 padding: 1rem;
             }
-            
+
             .stWarning {
                 background: #fff3e0;
                 border-left: 4px solid #ff9800;
@@ -187,7 +189,7 @@ class UIComponents:
                 color: #e65100;
                 padding: 1rem;
             }
-            
+
             .stInfo {
                 background: #e3f2fd;
                 border-left: 4px solid #2196f3;
@@ -202,7 +204,7 @@ class UIComponents:
                 overflow: hidden;
                 border: 2px solid #e0e0e0;
             }
-            
+
             .stDataFrame [data-testid="stDataFrameResizable"] {
                 background-color: #ffffff !important;
             }
@@ -213,7 +215,7 @@ class UIComponents:
                 font-weight: 600;
                 font-size: 1.5rem !important;
             }
-            
+
             [data-testid="stMetricLabel"] {
                 color: #666666 !important;
                 font-weight: 500;
@@ -233,7 +235,7 @@ class UIComponents:
                 border: 2px solid #e0e0e0;
                 background: #f8f9fa;
             }
-            
+
             code {
                 background: #f0f0f0 !important;
                 color: #1a1a1a !important;
@@ -247,16 +249,16 @@ class UIComponents:
                 width: 10px;
                 height: 10px;
             }
-            
+
             ::-webkit-scrollbar-track {
                 background: #f5f5f5;
             }
-            
+
             ::-webkit-scrollbar-thumb {
                 background: #bdbdbd;
                 border-radius: 5px;
             }
-            
+
             ::-webkit-scrollbar-thumb:hover {
                 background: #9e9e9e;
             }
@@ -268,45 +270,53 @@ class UIComponents:
                 border-radius: 6px !important;
                 color: #1a1a1a !important;
             }
-            
+
             /* Better text contrast */
             p, span, div {
                 color: #1a1a1a !important;
             }
-            
+
             /* Sidebar text */
             [data-testid="stSidebar"] p,
             [data-testid="stSidebar"] span,
             [data-testid="stSidebar"] div {
                 color: #1a1a1a !important;
             }
-            
+
             /* Headers in sidebar */
             [data-testid="stSidebar"] h1,
             [data-testid="stSidebar"] h2,
             [data-testid="stSidebar"] h3 {
                 color: #1a1a1a !important;
             }
-            
+
             /* Make captions more visible */
             .caption, [data-testid="stCaptionContainer"] {
                 color: #666666 !important;
                 font-size: 0.9rem;
             }
         </style>
-        """, unsafe_allow_html=True)
-    
+        """,
+            unsafe_allow_html=True,
+        )
+
     @staticmethod
     def render_header():
         """Render application header."""
-        st.markdown('<div class="main-header">🗂️ MCP Filesystem Assistant</div>', unsafe_allow_html=True)
-        st.markdown('<div class="sub-header">AI-Powered File Management with Model Context Protocol</div>', unsafe_allow_html=True)
-    
+        st.markdown(
+            '<div class="main-header">🗂️ MCP Filesystem Assistant</div>',
+            unsafe_allow_html=True,
+        )
+        st.markdown(
+            '<div class="sub-header">AI-Powered File Management with Model Context Protocol</div>',
+            unsafe_allow_html=True,
+        )
+
     @staticmethod
     def render_connection_status(is_connected: bool, server_url: str):
         """
         Render server connection status.
-        
+
         Args:
             is_connected: Whether server is connected
             server_url: Server URL to display
@@ -316,30 +326,25 @@ class UIComponents:
             st.info(f"📡 **Server:** `{server_url}`")
         else:
             st.error("❌ MCP Server Disconnected")
-            st.warning(
-                "**Start the server:**\n"
-                "```bash\n"
-                "python server/filesystem_mcp_server.py\n"
-                "```"
-            )
-    
+            st.warning("**Start the server:**\n```bash\npython server/filesystem_mcp_server.py\n```")
+
     @staticmethod
     def render_workspace_info(workspace_path: Path, file_count: int):
         """
         Render workspace information.
-        
+
         Args:
             workspace_path: Path to workspace directory
             file_count: Number of files in workspace
         """
         st.info(f"**📁 Location:**\n`{workspace_path}`")
         st.metric("📊 Files/Folders", file_count)
-    
+
     @staticmethod
-    def render_tools_list(tools: List[Dict]):
+    def render_tools_list(tools: list[dict]):
         """
         Render available tools list.
-        
+
         Args:
             tools: List of tool metadata
         """
@@ -350,12 +355,12 @@ class UIComponents:
                 st.caption(f"📝 {tool.get('description', 'No description')}")
                 if i < len(tools):
                     st.markdown("---")
-    
+
     @staticmethod
     def render_chat_message(role: str, content: str):
         """
         Render a chat message.
-        
+
         Args:
             role: Message role (user/assistant)
             content: Message content
@@ -363,19 +368,19 @@ class UIComponents:
         if role == "user":
             st.markdown(
                 f'<div class="chat-user">👤 <b>You</b><br><br>{content}</div>',
-                unsafe_allow_html=True
+                unsafe_allow_html=True,
             )
         elif role == "assistant":
             st.markdown(
                 f'<div class="chat-assistant">🤖 <b>Assistant</b><br><br>{content}</div>',
-                unsafe_allow_html=True
+                unsafe_allow_html=True,
             )
-    
+
     @staticmethod
-    def render_tool_calls(tool_calls: List[Dict]):
+    def render_tool_calls(tool_calls: list[dict]):
         """
         Render tool calls in an expander.
-        
+
         Args:
             tool_calls: List of tool calls made
         """
@@ -385,21 +390,21 @@ class UIComponents:
                     args_str = ", ".join([f"{k}={v}" for k, v in tool["arguments"].items()])
                     st.markdown(
                         f'<div class="tool-call">🛠️ {i}. {tool["name"]}({args_str})</div>',
-                        unsafe_allow_html=True
+                        unsafe_allow_html=True,
                     )
-    
+
     @staticmethod
     def render_example_prompts():
         """Render example prompt buttons."""
         st.markdown("### 💡 Try these examples:")
         col1, col2, col3 = st.columns(3)
-        
+
         examples = {
             "📋 List files": "List all files in the workspace",
             "📝 Read notes": "Read the contents of notes.txt",
-            "📄 Create file": "Create a file called hello.txt with 'Hello from MCP!'"
+            "📄 Create file": "Create a file called hello.txt with 'Hello from MCP!'",
         }
-        
+
         clicked = None
         with col1:
             if st.button("📋 List files", use_container_width=True, key="ex1"):
@@ -410,17 +415,17 @@ class UIComponents:
         with col3:
             if st.button("📄 Create file", use_container_width=True, key="ex3"):
                 clicked = examples["📄 Create file"]
-        
+
         return clicked
-    
+
     @staticmethod
-    def list_workspace_files(workspace_path: Path) -> List[Dict]:
+    def list_workspace_files(workspace_path: Path) -> list[dict]:
         """
         Get list of files in workspace.
-        
+
         Args:
             workspace_path: Path to workspace directory
-            
+
         Returns:
             List of file metadata dictionaries
         """
@@ -428,29 +433,34 @@ class UIComponents:
             files = []
             for item in workspace_path.iterdir():
                 stat = item.stat()
-                files.append({
-                    "name": item.name,
-                    "type": "📂" if item.is_dir() else "📄",
-                    "size": f"{stat.st_size:,} bytes" if stat.st_size < 1024 else f"{stat.st_size/1024:.1f} KB",
-                    "modified": datetime.fromtimestamp(stat.st_mtime).strftime("%Y-%m-%d %H:%M")
-                })
+                files.append(
+                    {
+                        "name": item.name,
+                        "type": "📂" if item.is_dir() else "📄",
+                        "size": f"{stat.st_size:,} bytes" if stat.st_size < 1024 else f"{stat.st_size / 1024:.1f} KB",
+                        "modified": datetime.fromtimestamp(stat.st_mtime).strftime("%Y-%m-%d %H:%M"),
+                    }
+                )
             return sorted(files, key=lambda x: (x["type"] != "📂", x["name"]))
         except Exception:
             return []
-    
+
     @staticmethod
     def render_footer():
         """Render application footer."""
         st.divider()
-        st.markdown("""
+        st.markdown(
+            """
         <div style="text-align: center; color: #666666; padding: 1.5rem; font-size: 0.9rem;">
             <p style="margin: 0.5rem 0;">
-                Built with ❤️ using <b style="color: #1a1a1a;">FastMCP</b>, 
-                <b style="color: #1a1a1a;">OpenAI</b>, and 
+                Built with ❤️ using <b style="color: #1a1a1a;">FastMCP</b>,
+                <b style="color: #1a1a1a;">OpenAI</b>, and
                 <b style="color: #1a1a1a;">Streamlit</b>
             </p>
             <p style="margin: 0.5rem 0; font-size: 0.85rem;">
                 🔒 All operations are securely sandboxed to the workspace directory
             </p>
         </div>
-        """, unsafe_allow_html=True)
+        """,
+            unsafe_allow_html=True,
+        )
